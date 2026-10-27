@@ -62,16 +62,32 @@
 # print(num, "Appears", count, "times")
 
 
+# numbers = [1, 2, 2, 3, 1, 2, 4, 3]
+# visited = []
+
+# for num in numbers:
+#     if num not in visited:
+#         count = 0
+
+#         for item in numbers:
+#             if item == num:
+#                 count += 1
+
+#         print(num, "appears", count, "times")
+#         visited.append(num)
+
+
 numbers = [1, 2, 2, 3, 1, 2, 4, 3]
-visited = []
+
+most_frequent = numbers[0]
+max_count = 0
 
 for num in numbers:
-    if num not in visited:
-        count = 0
+    count = numbers.count(num)
 
-        for item in numbers:
-            if item == num:
-                count += 1
+    if count> max_count:
+        max_count = count 
+        most_frequent = num
 
-        print(num, "appears", count, "times")
-        visited.append(num)
+print("most frequent element", most_frequent)
+print("Frequency",max_count)
